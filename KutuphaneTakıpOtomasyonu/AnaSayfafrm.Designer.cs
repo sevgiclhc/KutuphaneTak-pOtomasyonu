@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMemberListAddition = new System.Windows.Forms.Button();
             this.btnMemberAdditions = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnBookListAdditions = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGraphics = new System.Windows.Forms.Button();
             this.btnArrangement = new System.Windows.Forms.Button();
-            this.btnMemberListAddition = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -58,6 +58,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Member Transactions";
+            // 
+            // btnMemberListAddition
+            // 
+            this.btnMemberListAddition.Location = new System.Drawing.Point(37, 75);
+            this.btnMemberListAddition.Name = "btnMemberListAddition";
+            this.btnMemberListAddition.Size = new System.Drawing.Size(228, 23);
+            this.btnMemberListAddition.TabIndex = 1;
+            this.btnMemberListAddition.Text = "Member List Additions";
+            this.btnMemberListAddition.UseVisualStyleBackColor = true;
+            this.btnMemberListAddition.Click += new System.EventHandler(this.btnMemberListAddition_Click);
             // 
             // btnMemberAdditions
             // 
@@ -173,16 +183,6 @@
             this.btnArrangement.Text = "Arrangement";
             this.btnArrangement.UseVisualStyleBackColor = true;
             // 
-            // btnMemberListAddition
-            // 
-            this.btnMemberListAddition.Location = new System.Drawing.Point(37, 75);
-            this.btnMemberListAddition.Name = "btnMemberListAddition";
-            this.btnMemberListAddition.Size = new System.Drawing.Size(228, 23);
-            this.btnMemberListAddition.TabIndex = 1;
-            this.btnMemberListAddition.Text = "Member List Additions";
-            this.btnMemberListAddition.UseVisualStyleBackColor = true;
-            this.btnMemberListAddition.Click += new System.EventHandler(this.btnMemberListAddition_Click);
-            // 
             // AnaSayfafrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,7 +194,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AnaSayfafrm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main Page";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

@@ -19,17 +19,20 @@ namespace KutuphaneTakıpOtomasyonu
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            BookAddfrm bookadd = new BookAddfrm();
+            bookadd.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            BookListfrm booklist = new BookListfrm();
+            booklist.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            LendingaBookfrm lendingabook = new LendingaBookfrm();
+            lendingabook.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)

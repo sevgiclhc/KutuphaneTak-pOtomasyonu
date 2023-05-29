@@ -244,6 +244,7 @@
             this.Controls.Add(this.txtNameSurname);
             this.Controls.Add(this.txtTc);
             this.Name = "MemberAddfrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Add Page";
             this.Load += new System.EventHandler(this.MemberAddfrm_Load);
             this.ResumeLayout(false);

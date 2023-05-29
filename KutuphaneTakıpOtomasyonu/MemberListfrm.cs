@@ -27,12 +27,12 @@ namespace KutuphaneTakıpOtomasyonu
             while (read.Read())
             {
                 txtNameSurname.Text = read["namesurname"].ToString();
-                txtAge.Text = read["Age"].ToString();
+                txtAge.Text = read["age"].ToString();
                 comboGender.Text = read["gender"].ToString();
                 txtPhoneNumber.Text = read["phonenumber"].ToString();
                 txtAddress.Text = read["address"].ToString();
                 txtEmail.Text = read["email"].ToString();
-                txtNumberofBookRead.Text = read["numberofbooknumber"].ToString();
+                txtNumberofBookRead.Text = read["numberofbookread"].ToString();
 
             }
             connection.Close();
@@ -62,20 +62,26 @@ namespace KutuphaneTakıpOtomasyonu
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            SqlCommand command = new SqlCommand("Delete from member where tc=@tc",connection);
-            command.Parameters.AddWithValue("@tc", dataGridView1.CurrentRow.Cells["tc"].Value.ToString());
-            command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Deletion has taken place");
-            daset.Tables["member"].Clear();
-            memberlist();
-            foreach(Control item in Controls)
+            DialogResult dialog;
+            dialog = MessageBox.Show("Do you want to delete this registration?","Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialog== DialogResult.Yes)
             {
-                if(item is TextBox)
+                connection.Open();
+                SqlCommand command = new SqlCommand("Delete from member where tc=@tc", connection);
+                command.Parameters.AddWithValue("@tc", dataGridView1.CurrentRow.Cells["tc"].Value.ToString());
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Deletion has taken place");
+                daset.Tables["member"].Clear();
+                memberlist();
+                foreach (Control item in Controls)
                 {
-                    item.Text = "";
+                    if (item is TextBox)
+                    {
+                        item.Text = "";
+                    }
                 }
+
             }
 
 
@@ -107,6 +113,7 @@ namespace KutuphaneTakıpOtomasyonu
             command.Parameters.AddWithValue("@numberofbookread", txtNumberofBookRead.Text);
             command.ExecuteNonQuery();
             connection.Close();
+            MessageBox.Show("The update has taken place");
             daset.Tables["member"].Clear();
             memberlist();
             foreach (Control item in Controls)
@@ -117,6 +124,11 @@ namespace KutuphaneTakıpOtomasyonu
                 }
             }
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -52,6 +52,24 @@
     <Compile Include="AnaSayfafrm.Designer.cs">
       <DependentUpon>AnaSayfafrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookAddfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookAddfrm.Designer.cs">
+      <DependentUpon>BookAddfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookListfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookListfrm.Designer.cs">
+      <DependentUpon>BookListfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LendingaBookfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LendingaBookfrm.Designer.cs">
+      <DependentUpon>LendingaBookfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberAddfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +86,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AnaSayfafrm.resx">
       <DependentUpon>AnaSayfafrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookAddfrm.resx">
+      <DependentUpon>BookAddfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookListfrm.resx">
+      <DependentUpon>BookListfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LendingaBookfrm.resx">
+      <DependentUpon>LendingaBookfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberAddfrm.resx">
       <DependentUpon>MemberAddfrm.cs</DependentUpon>
